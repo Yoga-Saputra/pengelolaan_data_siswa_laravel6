@@ -33,6 +33,7 @@
                                 <table class="table table-hover">
                                     <thead>
                                         <tr>
+                                            <th class="text-center panel-title">Id</th>
                                             <th class="text-center panel-title">Nama Depan</th>
                                             <th class="text-center panel-title">Nama Belakang</th>
                                             <th class="text-center panel-title">Jenis Kelamin</th>
@@ -42,9 +43,9 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                            
                                             @foreach ($data_siswa as $siswa)
-                                            <tr>    
+                                            <tr>
+                                                <td class="text-center"> {{$siswa->id }} </td>
                                                 <td class="text-center"> {{$siswa->nama_depan }} </td>
                                                 <td class="text-center"> {{ $siswa->nama_belakang }} </td>
                                                 <td class="text-center"> {{ $siswa->jenis_kelamin }} </td>

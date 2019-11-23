@@ -12,7 +12,7 @@ class SiswaController extends Controller
         if($request->has('cari')){
             $data_siswa = \App\Siswa::where('nama_depan', 'LIKE', '%'. $request->cari.'%')->paginate(5);
         }else{
-            $data_siswa = \App\Siswa::orderby('id','desc')->paginate(5);
+            $data_siswa = \App\Siswa::orderby('id','desc')->paginate(10);
         }   
         return view('siswa.index', compact('data_siswa'));
         //menampilkan data dari database
